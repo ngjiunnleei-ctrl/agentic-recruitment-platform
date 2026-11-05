@@ -15,6 +15,16 @@ Phase 5: Candidate Management API
 
 Overall Progress: ~50%
 
+Phase 6 - Resume Processing
+
+✅ Upload Resume
+✅ Save Resume
+
+⬜ Extract Resume Text
+⬜ Parse Skills
+⬜ Parse Experience
+⬜ Parse Certifications
+⬜ Create Candidate Automatically
 
 Phase 1 - Development Setup
 Verify Computer
