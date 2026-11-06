@@ -17,4 +17,11 @@ class Candidate(Base):
     nationality = Column(String)
 
     years_experience = Column(Integer)
-    
+
+    current_title = Column(String)
+
+    current_company = Column(String)
+
+    education = Column(String)
+
+    skills = Column(String)
