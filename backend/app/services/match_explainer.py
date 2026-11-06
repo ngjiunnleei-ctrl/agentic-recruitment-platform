@@ -1,0 +1,43 @@
+import os
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY")
+)
+
+
+def explain_match(
+    candidate_text: str,
+    job_text: str
+):
+
+    prompt = f"""
+    Explain why this candidate may match this job.
+
+    Candidate:
+
+    {candidate_text}
+
+    Job:
+
+    {job_text}
+
+    Return a concise recruiter explanation.
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=0
+    )
+
+    return response.choices[0].message.content
