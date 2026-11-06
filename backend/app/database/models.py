@@ -25,3 +25,17 @@ class Candidate(Base):
     education = Column(String)
 
     skills = Column(String)
+
+class Job(Base):
+    __tablename__ = "jobs"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    job_title = Column(String)
+
+    required_skills = Column(String)
+
+    preferred_skills = Column(String)
+
+    years_experience = Column(Integer)
+    

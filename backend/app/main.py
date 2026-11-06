@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from backend.app.routes.candidates import router as candidate_router
 from backend.app.routes.upload import router as upload_router
+from backend.app.routes.jobs import router as job_router
 
 app = FastAPI(
     title="Agentic Recruitment Platform",
@@ -10,6 +11,7 @@ app = FastAPI(
 
 app.include_router(candidate_router)
 app.include_router(upload_router)
+app.include_router(job_router)
 
 @app.get("/")
 def root():
@@ -17,9 +19,11 @@ def root():
         "message": "Agentic Recruitment Platform API is running"
     }
 
-
 @app.get("/health")
 def health_check():
     return {
         "status": "healthy"
     }
+
+
+

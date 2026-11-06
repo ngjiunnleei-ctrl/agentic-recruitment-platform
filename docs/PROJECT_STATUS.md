@@ -25,8 +25,16 @@ Test API
 Phase 5 - Resume Processing
 Status: Not Started
 
-Phase 6 - AI Resume Parsing
-Status: Not Started
+Phase 6 - Resume Processing
+
+✅ Upload Resume
+✅ Save Resume
+
+⬜ Extract Resume Text
+⬜ Parse Skills
+⬜ Parse Experience
+⬜ Parse Certifications
+⬜ Create Candidate Automatically
 
 Phase 7 - Job Description Processing
 Status: Not Started
